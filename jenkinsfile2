@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Clone the repository
-                    sh "git clone -b ${BRANCH} ${REPO_URL} ."
+                    sh "git clone -b ${main} ${https://github.com/Alina2619/task9.2.git} ."
                 }
             }
         }
