@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'my-node-app'
         DOCKER_TAG = 'latest'
-        REPO_URL = 'https://github.com/yourusername/your-repo.git' // Change this to your repository URL
+        REPO_URL = 'https://github.com/Alina2619/task9.2.git' // Change this to your repository URL
         BRANCH = 'main' // Change this to your target branch
     }
 
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image
-                    sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
+                    docker.build("${DOCKER_IMAGE}:${DOCKER_TAG}")
                 }
             }
         }
